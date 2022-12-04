@@ -22,5 +22,6 @@ class Transaction {
     this.inputUTXOs.forEach((utxo) => {
       utxo.spend();
     });
+    this.fee = inputAmount - outputAmount;
   }
 }
