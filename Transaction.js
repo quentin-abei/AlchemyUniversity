@@ -19,5 +19,8 @@ class Transaction {
     if (inputAmount < outputAmount) {
       throw new Error("Not enough funds");
     }
+    this.inputUTXOs.forEach((utxo) => {
+      utxo.spend();
+    });
   }
 }
